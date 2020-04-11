@@ -41,8 +41,10 @@ function init_country_data() {
                 $("#country_active").text('');
                 $("#country_critical").text('');
                 $("#country_cases_per_one_million").text('');
-            } else if (data == 'Country not found') {
-                $("#country_cases").text('*** INVALID COUNTRY ***');
+                $("#country_deaths_per_one_million").text('');
+                $("#country_tests").text('');
+                $("#country_tests_per_one_million").text('');
+            } else if (data == "Country not found or doesn't have any cases") {
                 $("#country_today_cases").text('');
                 $("#country_deaths").text('');
                 $("#country_today_deaths").text('');
@@ -50,6 +52,9 @@ function init_country_data() {
                 $("#country_active").text('');
                 $("#country_critical").text('');
                 $("#country_cases_per_one_million").text('');
+                $("#country_deaths_per_one_million").text('');
+                $("#country_tests").text('');
+                $("#country_tests_per_one_million").text('');
             } else {
                 $("#country_cases").text(data.cases + ' Cases');
                 $("#country_today_cases").text(data.todayCases + ' Cases Today');
@@ -59,6 +64,9 @@ function init_country_data() {
                 $("#country_active").text(data.active + ' Active');
                 $("#country_critical").text(data.critical + ' Critical');
                 $("#country_cases_per_one_million").text(data.casesPerOneMillion + ' Cases Per One Million');
+                $("#country_deaths_per_one_million").text(data.deathsPerOneMillion + ' Deaths Per One Million');
+                $("#country_tests").text(data.tests + ' Tests');
+                $("#country_tests_per_one_million").text(data.testsPerOneMillion + ' Tests Per One Million');
             }
         });
 
@@ -80,16 +88,28 @@ function country_data() {
         $("#country_active").text(data.active + ' Active');
         $("#country_critical").text(data.critical + ' Critical');
         $("#country_cases_per_one_million").text(data.casesPerOneMillion + ' Cases Per One Million');
+        $("#country_deaths_per_one_million").text(data.deathsPerOneMillion + ' Deaths Per One Million');
+        $("#country_tests").text(data.tests + ' Tests');
+        $("#country_tests_per_one_million").text(data.testsPerOneMillion + ' Tests Per One Million');
     });
 }
 
 // Obtain world data from API
 function world_data() {
     $.get('https://corona.lmao.ninja/all', function(data) {
-            // console.log(data);
+        // console.log(data);
 
-            $("#world_cases").text(data.cases + ' Cases');
-            $("#world_deaths").text(data.deaths + ' Deaths');
-            $("#world_recovered").text(data.recovered + ' Recovered');
+        $("#world_cases").text(data.cases + ' Cases');
+        $("#world_today_cases").text(data.todayCases + ' Today Cases');
+        $("#world_deaths").text(data.deaths + ' Deaths');
+        $("#world_today_deaths").text(data.todayDeaths + ' Deaths Today');
+        $("#world_recovered").text(data.recovered + ' Recovered');
+        $("#world_active").text(data.active + ' Active');
+        $("#world_critical").text(data.critical + ' Critical');
+        $("#world_cases_per_one_million").text(data.casesPerOneMillion + ' Cases Per One Million');
+        $("#world_deaths_per_one_million").text(data.deathsPerOneMillion + ' Deaths Per One Million');
+        $("#world_tests").text(data.tests + ' Tests');
+        $("#world_tests_per_one_million").text(data.testsPerOneMillion + ' Tests Per One Million');
+        $("#world_affected_countries").text(data.affectedCountries + ' Affected Countries');
     });
 }
