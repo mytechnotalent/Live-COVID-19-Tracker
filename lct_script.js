@@ -29,7 +29,7 @@ function init_country_data() {
         input = $input.val();
         $('#text-output').text(input);
 
-        $.get('https://corona.lmao.ninja/countries/' + input, function(data) {
+        $.get('https://corona.lmao.ninja/v2/countries/' + input, function(data) {
             // console.log(data);
 
             if (input == '') {
@@ -77,7 +77,7 @@ function init_country_data() {
 
 // Obtain country data from API
 function country_data() {
-    $.get('https://corona.lmao.ninja/countries/' + input, function(data) {
+    $.get('https://corona.lmao.ninja/v2/countries/' + input, function(data) {
         // console.log(data);
 
         $("#country_cases").text(data.cases + ' Cases');
@@ -96,7 +96,7 @@ function country_data() {
 
 // Obtain world data from API
 function world_data() {
-    $.get('https://corona.lmao.ninja/all', function(data) {
+    $.get('https://corona.lmao.ninja/v2/all', function(data) {
         // console.log(data);
 
         $("#world_cases").text(data.cases + ' Cases');
