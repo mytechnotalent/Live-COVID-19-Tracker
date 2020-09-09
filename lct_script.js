@@ -1,14 +1,17 @@
 // Live COVID-19 Tracker
 // *********************
 // 
-// Created by Kevin Thomas 03/22/20.
-// Modified by Kevin Thomas 03/22/20.
+// Created by Kevin Thomas 03/22/20
+// Modified by Kevin Thomas 03/22/20
 //
-// Apache License, Version 2.0
+// Copyright: (c) 2020, Kevin Thomas <kevin@mytechnotalent.com>
+// Apache License, Version 2.0 (see COPYING or https://www.apache.org/licenses/LICENSE-2.0)
 // 
 // Live COVID-19 Tracker is a simple web app that shows the latest COVID-19 
 // statistics feed of the world and your country of choice in real-time which
 // refreshes every 60 seconds.
+//
+// Version 0.0.1 Alpha
 
 
 // Global vars
