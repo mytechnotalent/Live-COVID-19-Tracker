@@ -1,4 +1,4 @@
-![image](https://github.com/mytechnotalent/Live_COVID-19_Tracker/blob/master/LC19T.png?raw=true)
+![image](https://github.com/mytechnotalent/Live-COVID-19-Tracker/blob/main/LC19T.png?raw=true)
 
 # Live COVID-19 Tracker
 
